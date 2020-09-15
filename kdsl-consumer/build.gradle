@@ -1,0 +1,14 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+    id 'application'
+}
+
+application {
+    mainClass.set("com.example.MainKt")
+}
+
+dependencies {
+    implementation(project(":kdsl-api"))
+    implementation(project(":kdsl-extensions"))
+    implementation(project(":kdsl-accessors"))
+}

@@ -1,0 +1,13 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven { url = 'https://kotlin.bintray.com/kotlin-eap/' }
+    }
+}
+
+rootProject.name = 'kotlin-1.4-change'
+
+include("kdsl-api")
+include("kdsl-extensions")
+include("kdsl-accessors")
+include("kdsl-consumer")
