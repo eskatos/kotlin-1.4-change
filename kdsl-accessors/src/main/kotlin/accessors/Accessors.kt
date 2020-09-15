@@ -1,9 +1,10 @@
 package accessors
 
+import api.Action
 import api.SpecializedContainer
 
 val specialized: SpecializedContainer
     get() = SpecializedContainer()
 
-fun specialized(action: SpecializedContainer.() -> Unit): Unit =
-    action(specialized)
+fun specialized(action: Action<SpecializedContainer>): Unit =
+    action.execute(specialized)
